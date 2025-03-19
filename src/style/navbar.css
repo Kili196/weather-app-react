@@ -1,0 +1,9 @@
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav div {
+  background-color: aqua;
+}

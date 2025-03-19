@@ -1,7 +1,13 @@
+import "../style/navbar.css";
+
 const Navbar = () => {
   return (
     <>
-      <nav>dsa</nav>
+      <nav>
+        <input />
+        <div>d</div>
+        <div>d</div>
+      </nav>
     </>
   );
 };
