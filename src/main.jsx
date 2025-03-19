@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import "./index.css";
+import "./style/index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

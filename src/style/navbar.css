@@ -1,9 +1,45 @@
 nav {
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
+  font-size: 1.3rem;
 }
 
-nav div {
-  background-color: aqua;
+.nav-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  min-width: 400px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/** UTILITY CLASS **/
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.gap {
+  gap: 10px;
+}
+
+/** CLASSES **/
+
+.highlight {
+  font-weight: 600;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
