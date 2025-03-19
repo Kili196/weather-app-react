@@ -12,12 +12,6 @@ nav {
   flex-direction: column;
 }
 
-input {
-  min-width: 400px;
-  padding: 6px;
-  font-size: 1rem;
-}
-
 /** UTILITY CLASS **/
 
 .flex-row {
@@ -43,5 +37,22 @@ input {
 .input-container {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+}
+
+.input-container input {
+  min-width: 400px;
+  padding: 8px;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid gray;
+}
+
+.input-container input:focus {
+  border: 1px solid gray;
+}
+
+.input-container button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
