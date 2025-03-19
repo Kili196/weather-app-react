@@ -1,6 +1,12 @@
 import "../style/navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ currentLocation, setCurrentLocation }) => {
+  let currentValue = currentLocation;
+
+  function handleButtonClick() {
+    setCurrentLocation(currentValue);
+  }
+
   return (
     <>
       <nav>
@@ -8,13 +14,19 @@ const Navbar = () => {
           Good morning,{" "}
           <span>
             {" "}
-            you are in <span className="highlight"> England, London </span>{" "}
+            you are in <span className="highlight">
+              {" "}
+              {currentLocation}{" "}
+            </span>{" "}
           </span>
         </div>
         <div className="flex-row gap center">
           <div className="input-container">
-            <input placeholder="SEARCH LOCATION" />
-            <button> ENTER</button>
+            <input
+              placeholder="SEARCH LOCATION"
+              onChange={(e) => (currentValue = e.target.value)}
+            />
+            <button onClick={handleButtonClick}> ENTER</button>
           </div>
           <div> ds</div>
         </div>
