@@ -10,6 +10,7 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1;
   font-size: var(--navbar-heading);
+  font-weight: 500;
 }
 
 /** UTILITY CLASS **/
@@ -39,6 +40,7 @@ nav {
 
 .highlight {
   font-weight: 600;
+  font-style: italic;
 }
 
 .input-container {

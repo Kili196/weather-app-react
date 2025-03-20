@@ -1,6 +1,6 @@
 import "../style/navbar.css";
 
-const Navbar = ({ currentLocation, handleSearchButton }) => {
+const Navbar = ({ currentLocation, handleSearchButton, locationToShow }) => {
   let currentValue = currentLocation;
 
   return (
@@ -12,7 +12,7 @@ const Navbar = ({ currentLocation, handleSearchButton }) => {
             {" "}
             you are in <span className="highlight">
               {" "}
-              {currentLocation}{" "}
+              {locationToShow}{" "}
             </span>{" "}
           </span>
         </div>
