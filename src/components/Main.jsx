@@ -1,7 +1,7 @@
 import "../style/main.css";
 
-const Main = () => {
-  return <main>dsahdshds</main>;
+const Main = ({ currentLocation }) => {
+  return <main>{currentLocation}</main>;
 };
 
 export default Main;

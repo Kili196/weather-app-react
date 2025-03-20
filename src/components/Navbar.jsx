@@ -1,11 +1,7 @@
 import "../style/navbar.css";
 
-const Navbar = ({ currentLocation, setCurrentLocation }) => {
+const Navbar = ({ currentLocation, handleSearchButton }) => {
   let currentValue = currentLocation;
-
-  function handleButtonClick() {
-    setCurrentLocation(currentValue);
-  }
 
   return (
     <>
@@ -26,7 +22,10 @@ const Navbar = ({ currentLocation, setCurrentLocation }) => {
               placeholder="SEARCH LOCATION"
               onChange={(e) => (currentValue = e.target.value)}
             />
-            <button onClick={handleButtonClick}> ENTER</button>
+            <button onClick={() => handleSearchButton(currentValue)}>
+              {" "}
+              ENTER
+            </button>
           </div>
           <div> ds</div>
         </div>

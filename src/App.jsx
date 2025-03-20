@@ -6,14 +6,19 @@ import { useState } from "react";
 const App = () => {
   const [currentLocation, setCurrentLocation] = useState("Vienna");
 
+  function handleSearchButton(value) {
+    console.log(value);
+    setCurrentLocation(value);
+  }
+
   return (
     <>
       <Layout>
         <Navbar
           currentLocation={currentLocation}
-          setCurrentLocation={setCurrentLocation}
+          handleSearchButton={handleSearchButton}
         />
-        <Main />
+        <Main currentLocation={currentLocation} />
       </Layout>
     </>
   );
