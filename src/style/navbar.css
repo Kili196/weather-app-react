@@ -1,15 +1,15 @@
 :root {
-  --navbar-heading: 1.2rem;
+  --navbar-heading: 1.3rem;
   --navbar-button: 1.1rem;
 }
 
 nav {
-  padding: 15px;
+  padding: 25px;
   display: flex;
   justify-content: space-between;
-
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  font-size: var(--navbar-heading);
 }
 
 /** UTILITY CLASS **/
@@ -48,8 +48,8 @@ nav {
 
 .input-container input {
   min-width: 300px;
-  padding: 12px;
-  font-size: 1rem;
+  padding: 15px;
+  font-size: var(--navbar-button);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 1px solid gray;
