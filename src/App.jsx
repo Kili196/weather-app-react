@@ -52,7 +52,7 @@ const App = () => {
         {data != null && (
           <Navbar handleSearchButton={handleSearchButton} data={data} />
         )}
-        <Main />
+        {data != null && <Main data={data} />}
       </Layout>
     </>
   );
