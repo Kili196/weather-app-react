@@ -1,7 +1,8 @@
 import "../style/navbar.css";
+import { useState } from "react";
 
 const Navbar = ({ handleSearchButton, data }) => {
-  let currentValue = "";
+  const [searchValue, setSearchValue] = useState("Vienna");
 
   return (
     <>
@@ -20,9 +21,10 @@ const Navbar = ({ handleSearchButton, data }) => {
           <div className="input-container">
             <input
               placeholder="SEARCH LOCATION"
-              onChange={(e) => (currentValue = e.target.value)}
+              onChange={(e) => setSearchValue(e.target.value)}
+              value={searchValue}
             />
-            <button onClick={() => handleSearchButton(currentValue)}>
+            <button onClick={() => handleSearchButton(searchValue)}>
               {" "}
               ENTER
             </button>
