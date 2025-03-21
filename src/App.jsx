@@ -4,7 +4,6 @@ import Main from "./components/Main";
 import { useState, useEffect } from "react";
 
 const App = () => {
-  let searchLocation = "Vienna";
   const [isLoading, setIsLoading] = useState(true);
   const [locationToShow, setLocationToShow] = useState("");
 
@@ -37,7 +36,7 @@ const App = () => {
   //call when component mounts
   useEffect(() => {
     const callApi = async () => {
-      return getWeatherData(searchLocation);
+      return getWeatherData("Vienna");
     };
 
     callApi().then((object) =>
@@ -45,8 +44,7 @@ const App = () => {
     );
   }, []);
 
-  async function handleSearchButton(value) {
-    searchLocation = value;
+  function handleSearchButton(value) {
     getWeatherData(value).then((object) =>
       setLocationToShow(`${object.location.name}, ${object.location.country}`)
     );
@@ -56,11 +54,10 @@ const App = () => {
     <>
       <Layout>
         <Navbar
-          searchLocation={searchLocation}
           handleSearchButton={handleSearchButton}
           locationToShow={locationToShow}
         />
-        <Main searchLocation={searchLocation} />
+        <Main />
       </Layout>
     </>
   );

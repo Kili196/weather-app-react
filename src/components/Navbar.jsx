@@ -1,7 +1,7 @@
 import "../style/navbar.css";
 
-const Navbar = ({ currentLocation, handleSearchButton, locationToShow }) => {
-  let currentValue = currentLocation;
+const Navbar = ({ handleSearchButton, locationToShow }) => {
+  let currentValue = "";
 
   return (
     <>
