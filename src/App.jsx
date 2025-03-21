@@ -4,11 +4,12 @@ import Main from "./components/Main";
 import { useState, useEffect } from "react";
 
 const App = () => {
-  const [searchLocation, setSearchLocation] = useState("Vienna");
+  let searchLocation = "Vienna";
   const [isLoading, setIsLoading] = useState(true);
   const [locationToShow, setLocationToShow] = useState("");
 
   async function getWeatherData(city) {
+    console.log(city);
     const api_key = import.meta.env.VITE_WEATHER_API_KEY;
     try {
       const response = await fetch(
@@ -33,6 +34,7 @@ const App = () => {
     }
   }
 
+  //call when component mounts
   useEffect(() => {
     const callApi = async () => {
       return getWeatherData(searchLocation);
@@ -44,7 +46,7 @@ const App = () => {
   }, []);
 
   async function handleSearchButton(value) {
-    setSearchLocation(value);
+    searchLocation = value;
     getWeatherData(value).then((object) =>
       setLocationToShow(`${object.location.name}, ${object.location.country}`)
     );
