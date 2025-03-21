@@ -7,43 +7,32 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
 
-  async function getWeatherData(city) {
+  function getWeatherData(city) {
     const api_key = import.meta.env.VITE_WEATHER_API_KEY;
-    try {
-      const response = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}&days=4&aqi=no&alerts=no`
-      );
-
-      if (!isLoading) {
+    setIsLoading(true);
+    fetch(
+      `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}&days=4&aqi=no&alerts=no`
+    )
+      .then((response) => {
         setIsLoading(true);
-      }
-
-      if (!response.ok) {
-        throw new Error(`HTTP error: Status ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      return data;
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setIsLoading(false);
-    }
+        if (response.ok) {
+          setIsLoading(false);
+          return response.json();
+        } else {
+          throw new Error(response.status);
+        }
+      })
+      .then((data) => setData(data))
+      .catch((error) => console.error(error));
   }
 
   //call when component mounts
   useEffect(() => {
-    const callApi = async () => {
-      return getWeatherData("Vienna");
-    };
-
-    callApi().then((object) => setData(object));
-    console.log(data);
+    getWeatherData("Vienna");
   }, []);
 
   function handleSearchButton(value) {
-    getWeatherData(value).then((object) => setData(object));
+    getWeatherData(value);
   }
 
   return (
