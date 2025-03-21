@@ -1,6 +1,6 @@
 import "../style/navbar.css";
 
-const Navbar = ({ handleSearchButton, locationToShow }) => {
+const Navbar = ({ handleSearchButton, data }) => {
   let currentValue = "";
 
   return (
@@ -10,9 +10,9 @@ const Navbar = ({ handleSearchButton, locationToShow }) => {
           Good morning,{" "}
           <span>
             {" "}
-            you are in <span className="highlight">
-              {" "}
-              {locationToShow}{" "}
+            you are in{" "}
+            <span className="highlight">
+              {data.location.name}, {data.location.country}
             </span>{" "}
           </span>
         </div>

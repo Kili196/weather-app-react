@@ -5,10 +5,9 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [locationToShow, setLocationToShow] = useState("");
+  const [data, setData] = useState(null);
 
   async function getWeatherData(city) {
-    console.log(city);
     const api_key = import.meta.env.VITE_WEATHER_API_KEY;
     try {
       const response = await fetch(
@@ -39,24 +38,20 @@ const App = () => {
       return getWeatherData("Vienna");
     };
 
-    callApi().then((object) =>
-      setLocationToShow(`${object.location.name}, ${object.location.country}`)
-    );
+    callApi().then((object) => setData(object));
+    console.log(data);
   }, []);
 
   function handleSearchButton(value) {
-    getWeatherData(value).then((object) =>
-      setLocationToShow(`${object.location.name}, ${object.location.country}`)
-    );
+    getWeatherData(value).then((object) => setData(object));
   }
 
   return (
     <>
       <Layout>
-        <Navbar
-          handleSearchButton={handleSearchButton}
-          locationToShow={locationToShow}
-        />
+        {data != null && (
+          <Navbar handleSearchButton={handleSearchButton} data={data} />
+        )}
         <Main />
       </Layout>
     </>
