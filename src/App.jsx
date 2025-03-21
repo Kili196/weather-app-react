@@ -16,14 +16,15 @@ const App = () => {
       .then((response) => {
         setIsLoading(true);
         if (response.ok) {
-          setIsLoading(false);
+          setIsLoading(true);
           return response.json();
         } else {
           throw new Error(response.status);
         }
       })
       .then((data) => setData(data))
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error))
+      .finally(setIsLoading(true));
   }
 
   //call when component mounts

@@ -16,6 +16,6 @@
 }
 
 .clock-card {
-  font-size: calc(3.5rem + 1.3vw);
+  font-size: calc(3.5rem + 0.6vw);
   font-family: "Orbitron", sans-serif;
 }
