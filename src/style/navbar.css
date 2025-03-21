@@ -1,6 +1,6 @@
 :root {
-  --navbar-heading: 1.3rem;
-  --navbar-button: 1.1rem;
+  --navbar-heading: calc(1.3rem + 0.1vw);
+  --navbar-button: calc(1.1rem + 0.1vw);
 }
 
 nav {
