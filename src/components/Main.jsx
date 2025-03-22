@@ -7,7 +7,10 @@ const Main = ({ data }) => {
 
   return (
     <main>
-      <ClockCard data={data} />
+      <header>
+        <ClockCard data={data} />
+      </header>
+      <section> </section>
     </main>
   );
 };
