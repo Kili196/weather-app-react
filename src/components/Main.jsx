@@ -8,11 +8,6 @@ const Main = ({ data }) => {
   return (
     <main>
       <ClockCard data={data} />
-      <ClockCard data={data} />
-      <ClockCard data={data} />
-      <ClockCard data={data} />
-      <ClockCard data={data} />
-      <ClockCard data={data} />
     </main>
   );
 };
