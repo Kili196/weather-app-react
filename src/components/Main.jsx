@@ -1,6 +1,7 @@
 import "../style/main.css";
 
 import ClockCard from "../components/cards/ClockCard";
+import LocationInformationCard from "./cards/LocationInformationCard";
 
 const Main = ({ data }) => {
   console.log(data);
@@ -10,7 +11,11 @@ const Main = ({ data }) => {
       <header>
         <ClockCard data={data} />
       </header>
-      <section> </section>
+      <section>
+        <div className="general-information-section">
+          <LocationInformationCard data={data} />{" "}
+        </div>
+      </section>
     </main>
   );
 };

@@ -1,23 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
 :root {
-  --font-size-card-title: 1.6rem; /* ~20px */
+  --font-size-card-title: 1.5rem; /* ~20px */
   --font-size-card-text: 1.2rem; /* ~16px */
 }
+
+/** UTILITY **/
+.column-2-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /** CARD UTILITY **/
 
 .card {
   background-color: white;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
   box-shadow: 1px 2px 13px 0px rgba(0, 0, 0, 0.51);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .clock-card {
   font-size: calc(var(--font-size-card-title) + 0.3vw);
   font-weight: 600;
   font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-heading {
+  font-size: clamp(1.2rem, calc(var(--font-size-card-title) + 0.5vw), 2.5rem);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 2560px) {
+  .card-heading {
+    font-size: clamp(1.5rem, calc(var(--font-size-card-title) + 0.8vw), 3rem);
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1200px) {
+  .card-heading {
+    font-size: clamp(1rem, calc(var(--font-size-card-title) + 0.3vw), 2rem);
+  }
+}
+
+.card-heading-highlight {
+  font-size: calc(var(--font-size-card-text));
+  color: gray;
+  font-weight: 400;
 }
