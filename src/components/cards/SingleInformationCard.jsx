@@ -3,7 +3,7 @@ const SingleInformationCard = ({ icon, information }) => {
     <>
       <div className="card single-information-card">
         <span className="icon"> {icon}</span>
-        <label> {information}%</label>
+        <label> {information}</label>
       </div>
     </>
   );
