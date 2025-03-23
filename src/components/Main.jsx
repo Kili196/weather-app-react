@@ -11,23 +11,28 @@ const Main = ({ data }) => {
         <ClockCard data={data} />
       </header>
       <section>
-        <div className="general-information-section">
-          <LocationInformationCard
-            mainTextLeft={data.location.name}
-            secondaryTextLeft={data.location.country}
-            mainTextRight={`${data.current.temp_c}°`}
-            secondaryTextRight={`${data.current.temp_f}F`}
-          />
-
-          <div className="detailed-information-section">
-            <SingleInformationCard
-              icon={<WiHumidity size={60} />}
-              information={data.current.humidity}
+        <div className="left-side">
+          <div className="general-information-section">
+            <LocationInformationCard
+              mainTextLeft={data.location.name}
+              secondaryTextLeft={data.location.country}
+              mainTextRight={`${data.current.temp_c}°`}
+              secondaryTextRight={`${data.current.temp_f}F`}
             />
-            <SingleInformationCard icon={<WiHumidity />} information={""} />
-            <SingleInformationCard icon={<WiHumidity />} information={""} />
+
+            <div className="detailed-information-section">
+              <SingleInformationCard
+                icon={<WiHumidity size={60} />}
+                information={data.current.humidity}
+              />
+              <SingleInformationCard icon={<WiHumidity />} information={""} />
+              <SingleInformationCard icon={<WiHumidity />} information={""} />
+              <SingleInformationCard icon={<WiHumidity />} information={""} />
+            </div>
           </div>
+          <div> dsads</div>
         </div>
+        <div className="right-side"></div>
       </section>
     </main>
   );

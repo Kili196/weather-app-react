@@ -9,18 +9,21 @@ main {
 
 main section {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 2fr;
 }
 
-.general-information-section {
+.left-side {
   display: grid;
-  grid-template-rows: 1fr 100px;
+  grid-template-rows: auto 1fr;
+}
+.general-information-section {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .detailed-information-section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
