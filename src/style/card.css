@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
+:root {
+  --font-size-card-title: 1.6rem; /* ~20px */
+  --font-size-card-text: 1.2rem; /* ~16px */
+}
 /** CARD UTILITY **/
 
 .card {
@@ -13,7 +17,7 @@
 }
 
 .clock-card {
-  font-size: calc(3rem + 0.3vw);
+  font-size: calc(var(--font-size-card-title) + 0.3vw);
   font-weight: 600;
   font-family: monospace;
 }
