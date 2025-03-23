@@ -4,8 +4,6 @@ import ClockCard from "../components/cards/ClockCard";
 import LocationInformationCard from "./cards/LocationInformationCard";
 
 const Main = ({ data }) => {
-  console.log(data);
-
   return (
     <main>
       <header>
@@ -13,9 +11,12 @@ const Main = ({ data }) => {
       </header>
       <section>
         <div className="general-information-section">
-          <LocationInformationCard data={data} />
-          <LocationInformationCard data={data} />
-          <LocationInformationCard data={data} />
+          <LocationInformationCard
+            mainTextLeft={data.location.name}
+            secondaryTextLeft={`Humidity ${data.current.humidity}`}
+            mainTextRight={`${data.current.temp_c}°`}
+            secondaryTextRight={`${data.current.temp_c}F`}
+          />
         </div>
       </section>
     </main>

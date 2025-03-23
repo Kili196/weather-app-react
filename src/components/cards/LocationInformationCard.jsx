@@ -1,23 +1,23 @@
-const LocationInformationCard = ({ data }) => {
+import CardHeading from "./CardHeading";
+
+const LocationInformationCard = ({
+  mainTextLeft,
+  secondaryTextLeft,
+  mainTextRight,
+  secondaryTextRight,
+}) => {
   return (
     <>
       <div className="card">
-        <div className="card-heading">
-          <label> {data.location.name} </label>
-          <label className="card-heading-highlight">
-            {" "}
-            Humidity {data.current.humidity}
-          </label>
-        </div>
+        <CardHeading
+          mainText={mainTextLeft}
+          secondaryText={secondaryTextLeft}
+        />
 
-        <div className="card-heading">
-          {" "}
-          <label> {data.current.temp_c}° </label>
-          <label className="card-heading-highlight center">
-            {" "}
-            {data.current.temp_f}f{" "}
-          </label>
-        </div>
+        <CardHeading
+          mainText={mainTextRight}
+          secondaryText={secondaryTextRight}
+        />
       </div>
     </>
   );

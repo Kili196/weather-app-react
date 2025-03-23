@@ -79,4 +79,5 @@
   font-size: calc(var(--font-size-card-secondary) + 0.02vw);
   color: var(--secondary-color);
   font-weight: 400;
+  margin: auto;
 }
