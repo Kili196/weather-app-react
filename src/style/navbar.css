@@ -36,11 +36,12 @@ nav {
   flex-direction: column;
   line-height: 1.5;
   font-size: var(--navbar-heading);
-  color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
 }
 
 .highlight {
   color: rgb(0, 0, 0);
+  font-weight: 600;
 }
 
 .input-container {
@@ -54,11 +55,11 @@ nav {
   font-size: var(--navbar-button);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border: 1px solid gray;
+  border: 1px solid #918f8f;
 }
 
 .input-container input:focus {
-  border: 1px solid gray;
+  border: 1px solid #918f8f;
 }
 
 .input-container button {

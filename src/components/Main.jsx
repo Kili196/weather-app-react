@@ -3,8 +3,6 @@ import "../style/main.css";
 import ClockCard from "../components/cards/ClockCard";
 import LocationInformationCard from "./cards/LocationInformationCard";
 import SingleInformationCard from "./cards/SingleInformationCard";
-import { WiHumidity } from "react-icons/wi";
-import { TiWeatherWindy } from "react-icons/ti";
 
 const Main = ({ data }) => {
   console.log(data);
@@ -25,12 +23,14 @@ const Main = ({ data }) => {
 
             <div className="detailed-information-section">
               <SingleInformationCard
-                icon={<WiHumidity size={60} />}
-                information={`${data.current.humidity}%`}
+                headline={"Huminidty"}
+                information={data.current.humidity}
+                unit={"%"}
               />
               <SingleInformationCard
-                icon={<TiWeatherWindy size={60} />}
-                information={`${data.current.wind_kph}km/h`}
+                headline={"Wind-speed"}
+                information={data.current.wind_kph}
+                unit={"km/h"}
               />
             </div>
           </div>

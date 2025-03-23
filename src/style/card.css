@@ -1,37 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
 :root {
-  --font-size-card-title: 1.5rem;
-  --font-size-card-text: 1.2rem;
-  --font-size-card-secondary: 1rem;
+  --font-size-card-title: 2rem;
+  --font-size-card-text: 1.3rem;
+  --font-size-card-secondary: 1.1rem;
   --secondary-color: #555;
-}
-
-@media (max-width: 768px) {
-  /* Tablets & smaller */
-  :root {
-    --font-size-card-title: 1.75rem;
-    --font-size-card-text: 1.4rem;
-    --font-size-card-secondary: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Mobile devices */
-  :root {
-    --font-size-card-title: 2rem;
-    --font-size-card-text: 1.6rem;
-    --font-size-card-secondary: 1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* Large screens */
-  :root {
-    --font-size-card-title: 2rem;
-    --font-size-card-text: 1.5rem;
-    --font-size-card-secondary: 1rem;
-  }
 }
 
 /** UTILITY **/
@@ -47,13 +20,26 @@
   align-items: center;
 }
 
+.start {
+  display: flex;
+  align-items: center;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.unit-font-size {
+  font-size: 1.3rem;
+}
+
 /** CARD UTILITY **/
 
 .card {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 1px 2px 13px 0px rgba(0, 0, 0, 0.51);
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
 .clock-card {
@@ -91,14 +77,18 @@
 
 .single-information-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80px;
+  min-height: calc(80px + 0.5vw);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.single-information-headline {
+  font-size: var(--font-size-card-text);
+  color: #555;
 }
 
 .single-information-card label {
   font-size: var(--font-size-card-title);
-  font-weight: 600;
 }
 
 .icon {
