@@ -54,9 +54,6 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 1px 2px 13px 0px rgba(0, 0, 0, 0.51);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .clock-card {
@@ -73,11 +70,27 @@
   font-weight: 600;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-heading-highlight {
   font-size: calc(var(--font-size-card-secondary) + 0.02vw);
   color: var(--secondary-color);
   font-weight: 400;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.single-information-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

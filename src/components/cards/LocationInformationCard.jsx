@@ -8,7 +8,7 @@ const LocationInformationCard = ({
 }) => {
   return (
     <>
-      <div className="card">
+      <div className="card location-card">
         <CardHeading
           mainText={mainTextLeft}
           secondaryText={secondaryTextLeft}
