@@ -1,8 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
 :root {
-  --font-size-card-title: 1.5rem; /* ~20px */
-  --font-size-card-text: 1.2rem; /* ~16px */
+  --font-size-card-title: 1.5rem;
+  --font-size-card-text: 1.2rem;
+  --font-size-card-secondary: 1rem;
+  --secondary-color: #555;
+}
+
+@media (max-width: 768px) {
+  /* Tablets & smaller */
+  :root {
+    --font-size-card-title: 1.75rem;
+    --font-size-card-text: 1.4rem;
+    --font-size-card-secondary: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile devices */
+  :root {
+    --font-size-card-title: 2rem;
+    --font-size-card-text: 1.6rem;
+    --font-size-card-secondary: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Large screens */
+  :root {
+    --font-size-card-title: 2rem;
+    --font-size-card-text: 1.5rem;
+    --font-size-card-secondary: 1rem;
+  }
 }
 
 /** UTILITY **/
@@ -40,27 +69,14 @@
 }
 
 .card-heading {
-  font-size: clamp(1.2rem, calc(var(--font-size-card-title) + 0.5vw), 2.5rem);
+  font-size: var(--font-size-card-title);
   font-weight: 600;
   display: flex;
   flex-direction: column;
 }
 
-@media (min-width: 2560px) {
-  .card-heading {
-    font-size: clamp(1.5rem, calc(var(--font-size-card-title) + 0.8vw), 3rem);
-  }
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 1200px) {
-  .card-heading {
-    font-size: clamp(1rem, calc(var(--font-size-card-title) + 0.3vw), 2rem);
-  }
-}
-
 .card-heading-highlight {
-  font-size: calc(var(--font-size-card-text));
-  color: gray;
+  font-size: calc(var(--font-size-card-secondary) + 0.02vw);
+  color: var(--secondary-color);
   font-weight: 400;
 }

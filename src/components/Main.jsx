@@ -13,7 +13,9 @@ const Main = ({ data }) => {
       </header>
       <section>
         <div className="general-information-section">
-          <LocationInformationCard data={data} />{" "}
+          <LocationInformationCard data={data} />
+          <LocationInformationCard data={data} />
+          <LocationInformationCard data={data} />
         </div>
       </section>
     </main>

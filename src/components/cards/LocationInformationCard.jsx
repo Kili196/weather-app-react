@@ -10,7 +10,14 @@ const LocationInformationCard = ({ data }) => {
           </label>
         </div>
 
-        <div className="card-heading">37° </div>
+        <div className="card-heading">
+          {" "}
+          <label> {data.current.temp_c}° </label>
+          <label className="card-heading-highlight center">
+            {" "}
+            {data.current.temp_f}f{" "}
+          </label>
+        </div>
       </div>
     </>
   );
