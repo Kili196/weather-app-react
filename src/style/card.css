@@ -94,3 +94,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.single-information-card label {
+  font-size: var(--font-size-card-title);
+  font-weight: 600;
+}
+
+.icon {
+  color: rgb(0, 102, 255);
+}

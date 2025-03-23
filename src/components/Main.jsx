@@ -21,7 +21,7 @@ const Main = ({ data }) => {
 
           <div className="detailed-information-section">
             <SingleInformationCard
-              icon={<WiHumidity />}
+              icon={<WiHumidity size={60} />}
               information={data.current.humidity}
             />
             <SingleInformationCard icon={<WiHumidity />} information={""} />
