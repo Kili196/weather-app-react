@@ -14,7 +14,9 @@ const ClockCard = ({ data }) => {
   }, [data.location.tz_id]);
   return (
     <div className="card clock-card">
-      {date.toFormat("hh:mm:ss")} {date.toFormat("a")}
+      <h1>
+        {date.toFormat("hh:mm:ss")} {date.toFormat("a")}{" "}
+      </h1>
     </div>
   );
 };
