@@ -1,6 +1,7 @@
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
+import "./global-variables.css";
 import { useState, useEffect } from "react";
 
 const App = () => {

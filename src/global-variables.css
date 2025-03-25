@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-padding: 25px;
+  --nav-padding: 20px;
+  --input-padding: 13px;
+
+  --font-weight-normal: 500;
+  --font-weight-important: 700;
+
+  --nav-heading-font-size: 1.5em;
+  --nav-input-font-size: 1.2em;
+
+  font-family: "Mulish", sans-serif;
+}
