@@ -7,6 +7,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
 
+  //api call
   function getWeatherData(city) {
     const api_key = import.meta.env.VITE_WEATHER_API_KEY;
     setIsLoading(true);
@@ -24,12 +25,16 @@ const App = () => {
       })
       .then((data) => setData(data))
       .catch((error) => console.error(error))
-      .finally(setIsLoading(true));
+      .finally(setIsLoading(false));
   }
 
   //call when component mounts
   useEffect(() => {
-    getWeatherData("Vienna");
+    if (localStorage.getItem("data") === null) {
+      getWeatherData("Vienna");
+    } else {
+      setData(localStorage.getItem("data"));
+    }
   }, []);
 
   function handleSearchButton(value) {
