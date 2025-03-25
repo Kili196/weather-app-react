@@ -1,8 +1,8 @@
 import "../style/navbar.css";
 import { useState } from "react";
 
-const Navbar = ({ handleSearchButton, data }) => {
-  const [searchValue, setSearchValue] = useState("Vienna");
+const Navbar = ({ handleSearchButton, data, startValue }) => {
+  const [searchValue, setSearchValue] = useState(startValue);
 
   return (
     <>

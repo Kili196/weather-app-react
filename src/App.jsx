@@ -23,7 +23,10 @@ const App = () => {
           throw new Error(response.status);
         }
       })
-      .then((data) => setData(data))
+      .then((data) => {
+        setData(data);
+        localStorage.setItem("data", JSON.stringify(data));
+      })
       .catch((error) => console.error(error))
       .finally(setIsLoading(false));
   }
@@ -33,7 +36,8 @@ const App = () => {
     if (localStorage.getItem("data") === null) {
       getWeatherData("Vienna");
     } else {
-      setData(localStorage.getItem("data"));
+      console.log(localStorage.getItem("data"));
+      setData(JSON.parse(localStorage.getItem("data")));
     }
   }, []);
 
@@ -45,7 +49,11 @@ const App = () => {
     <>
       <Layout>
         {data != null && (
-          <Navbar handleSearchButton={handleSearchButton} data={data} />
+          <Navbar
+            handleSearchButton={handleSearchButton}
+            data={data}
+            startValue={data.location.name}
+          />
         )}
         {data != null && <Main data={data} />}
       </Layout>
