@@ -1,0 +1,4 @@
+.card-heading h1 {
+  font-weight: var(--fw-600);
+  color: rgba(0, 0, 0, 0.623);
+}

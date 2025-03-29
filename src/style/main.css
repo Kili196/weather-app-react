@@ -30,6 +30,12 @@ main section {
   gap: var(--grid-gap);
 }
 
+.today-heading {
+  padding: 0;
+  margin: 0;
+  font-weight: var(--fw-600);
+}
+
 .single-information-section {
   gap: var(--grid-gap);
   display: flex;

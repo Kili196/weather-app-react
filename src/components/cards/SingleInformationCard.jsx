@@ -3,9 +3,9 @@ const SingleInformationCard = ({ headline, information, unit }) => {
     <>
       <div className="card flex-grow">
         <h1 className="single-information-headline "> {headline}</h1>
-        <div className="start flex-grow-1 ">
+        <div className="">
           <label className="">
-            {information} <label className="unit-font-size"> {unit}</label>
+            {information} <label className=""> {unit}</label>
           </label>
         </div>
       </div>

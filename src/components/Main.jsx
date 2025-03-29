@@ -15,11 +15,12 @@ const Main = ({ data }) => {
             <ClockCard data={data} />
           </header>
           <section className="information-section">
+            <h2 className="today-heading"> Todays highlight</h2>
             <LocationInformationCard
-              mainTextLeft={data.location.name}
-              secondaryTextLeft={data.location.country}
-              mainTextRight={`${data.current.temp_c}°`}
-              secondaryTextRight={`${data.current.temp_f}F`}
+              secondaryTextLeft={data.location.name}
+              mainTextLeft={data.location.country}
+              secondaryTextRight={`${data.current.temp_c}°`}
+              mainTextRight={`${data.current.temp_f}F`}
             />
 
             <section className="single-information-section">
