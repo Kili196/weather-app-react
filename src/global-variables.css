@@ -24,6 +24,8 @@
   --fw-800: 800;
   --fw-900: 900;
 
+  --grid-gap: 15px;
+
   --primary-color: #ff5722;
   --secondary-color: #e64a19;
 
@@ -39,4 +41,9 @@ button {
 
 button:hover {
   background-color: var(--secondary-color);
+}
+
+.card {
+  background-color: white;
+  padding: var(--input-padding);
 }

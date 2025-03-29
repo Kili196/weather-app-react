@@ -9,7 +9,7 @@ const Main = ({ data }) => {
   console.log(data);
   return (
     <main>
-      <Container>
+      <Container className={"main-grid"}>
         <header>
           <ClockCard data={data} />
         </header>

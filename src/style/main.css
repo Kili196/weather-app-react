@@ -2,4 +2,11 @@ main {
   background-color: #ececec;
   padding: var(--main-padding);
   height: 100%;
+  box-sizing: border-box;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--grid-gap);
 }
