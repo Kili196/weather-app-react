@@ -7,6 +7,30 @@ main {
 
 .main-grid {
   display: grid;
-  grid-template-rows: auto 1fr;
+
+  grid-template-columns: 1fr 1fr;
   gap: var(--grid-gap);
+}
+
+main section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left-side {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap);
+}
+
+.information-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+}
+
+.single-information-section {
+  gap: var(--grid-gap);
+  display: flex;
 }

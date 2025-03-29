@@ -46,4 +46,9 @@ button:hover {
 .card {
   background-color: white;
   padding: var(--input-padding);
+  border-radius: var(--input-padding);
+}
+
+.flex-grow {
+  flex-grow: 1;
 }

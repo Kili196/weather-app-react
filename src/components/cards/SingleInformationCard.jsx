@@ -1,7 +1,7 @@
 const SingleInformationCard = ({ headline, information, unit }) => {
   return (
     <>
-      <div className="card single-information-card">
+      <div className="card flex-grow">
         <h1 className="single-information-headline "> {headline}</h1>
         <div className="start flex-grow-1 ">
           <label className="">

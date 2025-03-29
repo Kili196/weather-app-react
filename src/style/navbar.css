@@ -4,7 +4,7 @@ nav {
   justify-content: space-between;
 
   z-index: 1;
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
   font-weight: var(--fw-600);
 }
 
@@ -29,7 +29,7 @@ nav h2 {
 .input-field input {
   padding: var(--input-padding);
   min-width: 400px;
-  font-size: var(--fs-300);
+  font-size: var(--fs-400);
   border-top-left-radius: 13px;
   border-bottom-left-radius: 13px;
   border: 1px solid gray;
@@ -37,7 +37,7 @@ nav h2 {
 
 .input-field button {
   padding: var(--input-padding);
-  font-size: var(--fs-300);
+  font-size: var(--fs-400);
   border: 1px solid gray;
   font-weight: var(--fw-700);
   color: white;
