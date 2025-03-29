@@ -4,6 +4,8 @@ nav {
   justify-content: space-between;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-600);
 }
 
 nav h2 {
@@ -13,20 +15,32 @@ nav h2 {
   font-weight: var(--font-weight-normal);
 }
 
+.location-highlight {
+  color: var(--primary-color);
+  font-weight: var(--fw-800);
+}
+
 .nav-inputs {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--nav-font-size);
 }
 
 .input-field input {
   padding: var(--input-padding);
   min-width: 400px;
-  font-size: var(--nav-input-font-size);
+  font-size: var(--fs-300);
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  border: 1px solid gray;
 }
 
 .input-field button {
   padding: var(--input-padding);
-  font-size: var(--nav-input-font-size);
+  font-size: var(--fs-300);
+  border: 1px solid gray;
+  font-weight: var(--fw-700);
+  color: white;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
 }

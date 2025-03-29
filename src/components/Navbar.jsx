@@ -11,7 +11,7 @@ const Navbar = ({ handleSearchButton, data, startValue }) => {
           <h2>
             Good morning,
             <span>
-              you are in
+              you are in{" "}
               <span className="location-highlight">
                 {data.location.name}, {data.location.country}
               </span>
