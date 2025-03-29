@@ -1,4 +1,5 @@
 main {
   background-color: #ececec;
   padding: var(--main-padding);
+  height: 100%;
 }
