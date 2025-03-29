@@ -28,3 +28,9 @@ body {
   grid-template-rows: auto 1fr;
   box-sizing: content-box;
 }
+
+.container {
+  margin: auto;
+  width: 80%;
+  z-index: 1;
+}

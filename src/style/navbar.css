@@ -2,7 +2,7 @@ nav {
   padding: var(--nav-padding);
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
   z-index: 1;
   font-size: var(--fs-400);
   font-weight: var(--fw-600);
