@@ -30,7 +30,7 @@ main section {
   gap: var(--grid-gap);
 }
 
-.today-heading {
+.section-heading {
   padding: 0;
   margin: 0;
   font-weight: var(--fw-600);
@@ -39,4 +39,9 @@ main section {
 .single-information-section {
   gap: var(--grid-gap);
   display: flex;
+}
+
+.map-container {
+  flex-grow: 1;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
 }
