@@ -15,6 +15,7 @@ main {
 main section {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
 }
 
 .left-side {

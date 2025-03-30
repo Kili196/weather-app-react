@@ -62,7 +62,10 @@ const Main = ({ data }) => {
             </MainSection>
           </section>
         </section>
-        <section className="right-side"></section>
+        <section className="">
+          <div className="card"></div>
+          <div className="card"></div>
+        </section>
       </Container>
     </main>
   );
