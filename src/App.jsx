@@ -38,7 +38,7 @@ const App = () => {
     if (localStorage.getItem("data") === null) {
       getWeatherData("Vienna");
     } else {
-      console.log(localStorage.getItem("data"));
+      console.log(JSON.parse(localStorage.getItem("data")));
       setData(JSON.parse(localStorage.getItem("data")));
     }
   }, []);

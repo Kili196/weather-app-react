@@ -50,7 +50,7 @@ const Main = ({ data }) => {
             <MainSection heading={"Maps-Location"}>
               <div className="map-container">
                 <Map
-                  defaultCenter={[data.location.lat, data.location.lon]}
+                  center={[data.location.lat, data.location.lon]}
                   defaultZoom={11}
                 >
                   <Marker
