@@ -43,29 +43,11 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
-.card {
-  background-color: white;
-  padding: var(--input-padding);
-  border-radius: var(--input-padding);
-  padding: 20px;
-}
-
-.card h1 {
-  padding: 0;
-  margin: 0;
-}
-
-.card h2 {
-  padding: 0;
-  margin: 0;
-}
-
-.location-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .flex-grow {
   flex-grow: 1;
+}
+
+.center {
+  display: flex;
+  align-items: center;
 }
