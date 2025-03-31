@@ -39,7 +39,7 @@ const Main = ({ data }) => {
                 <SingleInformationCard
                   headline={"Feels like"}
                   information={data.current.feelslike_c}
-                  unit={"C"}
+                  unit={"°"}
                 />
                 <SingleInformationCard
                   headline={"Wind direction"}
