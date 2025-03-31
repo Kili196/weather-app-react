@@ -13,8 +13,10 @@ const ForecastcastCard = ({ heading, forcastData }) => {
             const date = new Date(element.time);
             return (
               <li>
-                {date.toLocaleTimeString().replace(regex, replacement)}{" "}
-                {element.condition.text}{" "}
+                <label>
+                  {date.toLocaleTimeString().replace(regex, replacement)}{" "}
+                </label>
+                <label> {element.condition.text}</label>
                 {<img src={element.condition.icon} width={50} />}
               </li>
             );
