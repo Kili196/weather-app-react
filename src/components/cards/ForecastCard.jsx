@@ -9,7 +9,8 @@ const ForecastcastCard = ({ heading, forcastData }) => {
             return (
               <li>
                 {" "}
-                {element.time} {element.condition.text}
+                {element.time} {element.condition.text}{" "}
+                {<img src={element.condition.icon} width={50} />}
               </li>
             );
           })}
