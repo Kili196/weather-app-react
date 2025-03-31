@@ -59,5 +59,12 @@
 .forcast-section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(1fr);
+  overflow: auto;
+}
+
+.forcast-section li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

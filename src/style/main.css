@@ -1,14 +1,13 @@
 main {
   background-color: #ececec;
   padding: var(--main-padding);
-  height: 100%;
+
   box-sizing: border-box;
 }
 
 .main-grid {
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 2fr;
   gap: var(--grid-gap);
 }
 

@@ -69,8 +69,8 @@ const Main = ({ data }) => {
             forcastData={data.forecast.forecastday[0]}
           />
           <ForecastcastCard
-            heading={"Todays forcast"}
-            forcastData={data.forecast.forecastday}
+            heading={"Daily forcast"}
+            forcastData={data.forecast.forecastday[0]}
           />
         </section>
       </Container>
