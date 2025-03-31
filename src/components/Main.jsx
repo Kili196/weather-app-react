@@ -3,6 +3,7 @@ import "../style/main.css";
 import ClockCard from "../components/cards/ClockCard";
 import LocationInformationCard from "./cards/LocationInformationCard";
 import SingleInformationCard from "./cards/SingleInformationCard";
+import ForcastcastCard from "./cards/ForcastCard";
 import Container from "./Container";
 import MainSection from "./MainSection";
 import { Map, Marker } from "pigeon-maps";
@@ -63,8 +64,8 @@ const Main = ({ data }) => {
           </section>
         </section>
         <section className="">
-          <div className="card"></div>
-          <div className="card"></div>
+          <ForcastcastCard heading={"Daily forcast"} />
+          <ForcastcastCard heading={"Todays forcast"} />
         </section>
       </Container>
     </main>
