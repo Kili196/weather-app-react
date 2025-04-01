@@ -1,0 +1,34 @@
+main {
+  width: 100%;
+}
+
+.main--background {
+  background-color: rgb(221, 221, 221);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main__conditions {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__general-conditions {
+  display: flex;
+  flex-direction: column;
+}
+.main__general-conditions--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main__general-conditions--map {
+  flex-grow: 1;
+}
+
+.main__forcasts {
+  display: flex;
+}

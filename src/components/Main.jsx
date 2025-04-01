@@ -10,13 +10,13 @@ import { Map, Marker } from "pigeon-maps";
 
 const Main = ({ data }) => {
   return (
-    <Container className={""}>
-      <main>
-        <section className="">
+    <main className="main--background">
+      <Container className={"main"}>
+        <section className="main__conditions">
           <header>
             <ClockCard data={data} />
           </header>
-          <section className="">
+          <section className="main__general-conditions">
             <MainSection heading={"Todays highlight"}>
               <LocationInformationCard
                 secondaryTextLeft={data.location.name}
@@ -25,7 +25,7 @@ const Main = ({ data }) => {
                 mainTextRight={`${data.current.temp_f}F`}
               />
 
-              <section className="">
+              <section className="main__general-conditions--grid">
                 <SingleInformationCard
                   headline={"Huminidty"}
                   information={data.current.humidity}
@@ -49,7 +49,7 @@ const Main = ({ data }) => {
             </MainSection>
 
             <MainSection heading={"Maps-Location"}>
-              <div className="">
+              <div className="main__general-conditions--map">
                 <Map
                   center={[data.location.lat, data.location.lon]}
                   defaultZoom={11}
@@ -63,18 +63,8 @@ const Main = ({ data }) => {
             </MainSection>
           </section>
         </section>
-        <section className="">
-          <ForecastcastCard
-            heading={"Daily forcast"}
-            forcastData={data.forecast.forecastday[0]}
-          />
-          <ForecastcastCard
-            heading={"Forcast for the next days"}
-            forcastData={data.forecast.forecastday[0]}
-          />
-        </section>
-      </main>
-    </Container>
+      </Container>
+    </main>
   );
 };
 

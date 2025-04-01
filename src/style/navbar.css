@@ -13,11 +13,22 @@ nav {
   color: var(--primary-color);
 }
 
-.nav__input_fields > input {
-  padding: 0.4rem;
-  min-width: 400px;
+.nav__input-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
 }
 
-.nav__input_fields > button {
-  padding: 0.4rem;
+.nav__input-fields > input,
+.nav__input-fields > button {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid gray;
+}
+
+.nav__input-fields > input {
+  min-width: 400px;
 }
