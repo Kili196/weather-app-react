@@ -6,9 +6,9 @@ const ForecastcastCard = ({ heading, forcastData }) => {
 
   return (
     <>
-      <div className="card forcast-card">
-        <h1 className="card-sub-heading"> {heading}</h1>
-        <section className="forcast-section flex-grow">
+      <div className="">
+        <h1 className=""> {heading}</h1>
+        <section className="">
           {forcastData.hour.map((element) => {
             const date = new Date(element.time);
             return (

@@ -9,19 +9,19 @@ const Navbar = ({ handleSearchButton, data, startValue }) => {
     <>
       <Container>
         <nav>
-          <div className="nav-heading">
+          <div className="">
             <h2>
               Good morning,
               <span>
                 you are in{" "}
-                <span className="location-highlight">
+                <span className="">
                   {data.location.name}, {data.location.country}
                 </span>
               </span>
             </h2>
           </div>
-          <div className="nav-inputs">
-            <div className="input-field">
+          <div className="">
+            <div className="">
               <input
                 placeholder="SEARCH LOCATION"
                 onChange={(e) => setSearchValue(e.target.value)}

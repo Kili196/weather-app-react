@@ -3,7 +3,7 @@ import "../style/main.css";
 const MainSection = ({ children, heading }) => {
   return (
     <>
-      <h2 className="section-heading"> {heading}</h2>
+      <h2 className=""> {heading}</h2>
       {children}
     </>
   );

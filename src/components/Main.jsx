@@ -12,11 +12,11 @@ const Main = ({ data }) => {
   return (
     <main>
       <Container className={"main-grid"}>
-        <section className="left-side">
+        <section className="">
           <header>
             <ClockCard data={data} />
           </header>
-          <section className="information-section">
+          <section className="">
             <MainSection heading={"Todays highlight"}>
               <LocationInformationCard
                 secondaryTextLeft={data.location.name}
@@ -25,7 +25,7 @@ const Main = ({ data }) => {
                 mainTextRight={`${data.current.temp_f}F`}
               />
 
-              <section className="single-information-section">
+              <section className="">
                 <SingleInformationCard
                   headline={"Huminidty"}
                   information={data.current.humidity}
@@ -49,7 +49,7 @@ const Main = ({ data }) => {
             </MainSection>
 
             <MainSection heading={"Maps-Location"}>
-              <div className="map-container">
+              <div className="">
                 <Map
                   center={[data.location.lat, data.location.lon]}
                   defaultZoom={11}
@@ -69,7 +69,7 @@ const Main = ({ data }) => {
             forcastData={data.forecast.forecastday[0]}
           />
           <ForecastcastCard
-            heading={"Daily forcast"}
+            heading={"Forcast for the next days"}
             forcastData={data.forecast.forecastday[0]}
           />
         </section>
