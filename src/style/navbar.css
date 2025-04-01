@@ -1,0 +1,23 @@
+nav {
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__heading--highlight {
+  color: var(--primary-color);
+}
+
+.nav__input_fields > input {
+  padding: 0.4rem;
+  min-width: 400px;
+}
+
+.nav__input_fields > button {
+  padding: 0.4rem;
+}

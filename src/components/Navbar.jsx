@@ -9,30 +9,26 @@ const Navbar = ({ handleSearchButton, data, startValue }) => {
     <>
       <Container>
         <nav>
-          <div className="">
+          <div className="nav__heading">
+            <h2> Good morning,</h2>
             <h2>
-              Good morning,
-              <span>
-                you are in{" "}
-                <span className="">
-                  {data.location.name}, {data.location.country}
-                </span>
+              {" "}
+              you are in{" "}
+              <span className="">
+                {data.location.name}, {data.location.country}
               </span>
             </h2>
           </div>
-          <div className="">
-            <div className="">
-              <input
-                placeholder="SEARCH LOCATION"
-                onChange={(e) => setSearchValue(e.target.value)}
-                value={searchValue}
-              />
-              <button onClick={() => handleSearchButton(searchValue)}>
-                {" "}
-                ENTER
-              </button>
-            </div>
-            <div> ds</div>
+          <div className="nav__input_fields">
+            <input
+              placeholder="SEARCH LOCATION"
+              onChange={(e) => setSearchValue(e.target.value)}
+              value={searchValue}
+            />
+            <button onClick={() => handleSearchButton(searchValue)}>
+              {" "}
+              ENTER
+            </button>
           </div>
         </nav>
       </Container>

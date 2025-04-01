@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-family: "Roboto";
+}
+
 /* Remove default margin */
 body,
 h1,
@@ -71,4 +75,17 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.container {
+  max-width: 90%;
+  min-width: 90%;
+  margin: auto;
+  padding-inline: 1rem;
+  box-sizing: content-box;
 }

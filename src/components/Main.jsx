@@ -10,8 +10,8 @@ import { Map, Marker } from "pigeon-maps";
 
 const Main = ({ data }) => {
   return (
-    <main>
-      <Container className={"main-grid"}>
+    <Container className={""}>
+      <main>
         <section className="">
           <header>
             <ClockCard data={data} />
@@ -73,8 +73,8 @@ const Main = ({ data }) => {
             forcastData={data.forecast.forecastday[0]}
           />
         </section>
-      </Container>
-    </main>
+      </main>
+    </Container>
   );
 };
 
