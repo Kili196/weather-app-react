@@ -9,24 +9,27 @@ main {
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 1rem;
 }
 
-.main__conditions {
-  display: flex;
-  flex-direction: column;
-}
-
+.main__conditions,
 .main__general-conditions {
   display: flex;
   flex-direction: column;
 }
-.main__general-conditions--grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+.main__general-conditions,
+.main__general-conditions--map {
+  flex-grow: 1;
 }
 
 .main__general-conditions--map {
-  flex-grow: 1;
+  height: 30px;
+}
+
+.main__general-conditions--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .main__forcasts {

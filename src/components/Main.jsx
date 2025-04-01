@@ -47,20 +47,20 @@ const Main = ({ data }) => {
                 />
               </section>
             </MainSection>
-
-            <MainSection heading={"Maps-Location"}>
-              <div className="main__general-conditions--map">
+            <div className="main__general-conditions--map">
+              <MainSection heading={"Maps-Location"}>
                 <Map
                   center={[data.location.lat, data.location.lon]}
                   defaultZoom={11}
+                  height={400}
                 >
                   <Marker
                     width={50}
                     anchor={[data.location.lat, data.location.lon]}
                   />
                 </Map>
-              </div>
-            </MainSection>
+              </MainSection>
+            </div>
           </section>
         </section>
       </Container>
