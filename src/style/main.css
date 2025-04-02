@@ -32,6 +32,7 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
-.main__forcasts {
+.main__forecast {
   display: flex;
+  flex-direction: row;
 }

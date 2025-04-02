@@ -63,6 +63,17 @@ const Main = ({ data }) => {
             </div>
           </section>
         </section>
+        <section className="main__forecast">
+          {" "}
+          <ForecastcastCard
+            heading={"Daily forcast"}
+            forcastData={data.forecast.forecastday[0]}
+          />
+          <ForecastcastCard
+            heading={"Forcast for the next days"}
+            forcastData={data.forecast.forecastday[0]}
+          />
+        </section>
       </Container>
     </main>
   );
