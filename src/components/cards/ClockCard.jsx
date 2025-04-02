@@ -13,7 +13,7 @@ const ClockCard = ({ data }) => {
     return () => clearInterval(interval);
   }, [data.location.tz_id]);
   return (
-    <div className="">
+    <div className="card">
       <h1>
         {date.toFormat("hh:mm:ss")} {date.toFormat("a")}{" "}
       </h1>
