@@ -12,11 +12,11 @@ const Main = ({ data }) => {
   return (
     <main className="main--background">
       <Container className={"main"}>
-        <section className="main__conditions">
+        <section className="main--flex-column">
           <header>
             <ClockCard data={data} />
           </header>
-          <section className="main__general-conditions">
+          <section className="main--flex-column flex-1">
             <MainSection heading={"Todays highlight"}>
               <LocationInformationCard
                 secondaryTextLeft={data.location.name}
@@ -25,7 +25,7 @@ const Main = ({ data }) => {
                 mainTextRight={`${data.current.temp_f}F`}
               />
 
-              <section className="main__general-conditions--grid">
+              <section className="main--grid-singleinformation">
                 <SingleInformationCard
                   headline={"Huminidty"}
                   information={data.current.humidity}
@@ -47,33 +47,21 @@ const Main = ({ data }) => {
                 />
               </section>
             </MainSection>
-            <div className="main__general-conditions--map">
-              <MainSection heading={"Maps-Location"}>
-                <Map
-                  center={[data.location.lat, data.location.lon]}
-                  defaultZoom={11}
-                  height={400}
-                >
-                  <Marker
-                    width={50}
-                    anchor={[data.location.lat, data.location.lon]}
-                  />
-                </Map>
-              </MainSection>
-            </div>
+            <MainSection heading={"Todays highlight"} classname={"flex-1"}>
+              {" "}
+              <Map
+                center={[data.location.lat, data.location.lon]}
+                defaultZoom={11}
+              >
+                <Marker
+                  width={50}
+                  anchor={[data.location.lat, data.location.lon]}
+                />
+              </Map>
+            </MainSection>
           </section>
         </section>
-        <section className="main__forecast">
-          {" "}
-          <ForecastcastCard
-            heading={"Daily forcast"}
-            forcastData={data.forecast.forecastday[0]}
-          />
-          <ForecastcastCard
-            heading={"Forcast for the next days"}
-            forcastData={data.forecast.forecastday[0]}
-          />
-        </section>
+        <section className="main__forecast"></section>
       </Container>
     </main>
   );

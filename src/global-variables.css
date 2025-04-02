@@ -94,6 +94,7 @@ select {
 .main-container {
   display: grid;
   grid-template-rows: auto 1fr;
+  height: 100%;
 }
 
 .container {
@@ -121,4 +122,13 @@ button {
   background-color: #3d52a0;
   color: white;
   font-weight: 500;
+}
+
+/* UTILITY **/
+.full-width {
+  height: 100%;
+}
+
+.flex-1 {
+  flex-grow: 1;
 }

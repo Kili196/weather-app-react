@@ -12,22 +12,12 @@ main {
   padding: 1rem;
 }
 
-.main__conditions,
-.main__general-conditions {
+.main--flex-column {
   display: flex;
   flex-direction: column;
 }
 
-.main__general-conditions,
-.main__general-conditions--map {
-  flex-grow: 1;
-}
-
-.main__general-conditions--map {
-  height: 30px;
-}
-
-.main__general-conditions--grid {
+.main--grid-singleinformation {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

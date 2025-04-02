@@ -1,10 +1,10 @@
 import "../style/main.css";
 
-const MainSection = ({ children, heading }) => {
+const MainSection = ({ children, heading, classname }) => {
   return (
     <>
-      <h2 className=""> {heading}</h2>
-      {children}
+      <h2> {heading}</h2>
+      <div className={classname}> {children}</div>
     </>
   );
 };
