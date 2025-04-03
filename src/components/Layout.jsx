@@ -1,7 +1,7 @@
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="main-container">{children}</div>
+      <div className="grid-container">{children}</div>
     </>
   );
 };

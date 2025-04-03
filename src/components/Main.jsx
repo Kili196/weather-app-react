@@ -11,15 +11,15 @@ import { Map, Marker } from "pigeon-maps";
 const Main = ({ data }) => {
   return (
     <main className="main--background">
-      <Container className={"main "}>
-        <section className="main--flex-column main--gap">
+      <Container className={"weather-dashboard__layout"}>
+        <section className="weather-dasboard__layout_content">
           <header>
             <ClockCard data={data} />
           </header>
-          <section className="main--flex-column flex-1 main--gap">
+          <section className="weather-dasboard__layout_content flex-1 ">
             <MainSection
               heading={"Todays highlight"}
-              classname={" main--gap main--flex-column"}
+              classname={"weather-dasboard__layout_content"}
             >
               <LocationInformationCard
                 secondaryTextLeft={data.location.name}
@@ -28,7 +28,7 @@ const Main = ({ data }) => {
                 mainTextRight={`${data.current.temp_f}F`}
               />
 
-              <section className="main--grid-singleinformation main--gap">
+              <section className="weather-dashboard__layout_singleinformation">
                 <SingleInformationCard
                   headline={"Huminidty"}
                   information={data.current.humidity}
@@ -50,10 +50,7 @@ const Main = ({ data }) => {
                 />
               </section>
             </MainSection>
-            <MainSection
-              heading={"Todays highlight"}
-              classname={"flex-1 main--gap"}
-            >
+            <MainSection heading={"Todays highlight"} classname={"flex-1"}>
               {" "}
               <Map
                 center={[data.location.lat, data.location.lon]}
@@ -67,7 +64,7 @@ const Main = ({ data }) => {
             </MainSection>
           </section>
         </section>
-        <section className="main__forecast">
+        <section className="weather-dashboard__layout_forecasts">
           <ForecastcastCard
             heading={"Daily forcast"}
             forcastData={data.forecast.forecastday[0]}
