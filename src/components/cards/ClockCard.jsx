@@ -17,7 +17,7 @@ const ClockCard = ({ data }) => {
       <h1>
         {date.toFormat("hh:mm:ss")} {date.toFormat("a")}{" "}
       </h1>
-      <h1>{data.location.tz_id}</h1>
+      <h1 className="card--heading-secondary">{data.location.tz_id}</h1>
     </div>
   );
 };

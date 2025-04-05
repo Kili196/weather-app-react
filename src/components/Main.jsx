@@ -50,7 +50,7 @@ const Main = ({ data }) => {
                 />
               </section>
             </MainSection>
-            <MainSection heading={"Todays highlight"} classname={"flex-1"}>
+            <MainSection heading={"Current location"} classname={"flex-1"}>
               {" "}
               <Map
                 center={[data.location.lat, data.location.lon]}
