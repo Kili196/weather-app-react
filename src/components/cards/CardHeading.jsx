@@ -3,7 +3,7 @@ const CardHeading = ({ mainText, secondaryText }) => {
     <>
       <div className="">
         <h1>{mainText}</h1>
-        <h2 className=""> {secondaryText}</h2>
+        <h1 className=""> {secondaryText}</h1>
       </div>
     </>
   );

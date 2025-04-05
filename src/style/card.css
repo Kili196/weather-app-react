@@ -10,7 +10,9 @@
   flex-grow: 1;
 }
 
-.card__forecast_content li {
+.card__forecast_content li,
+.card--clock,
+.card--singleinformation {
   display: flex;
   justify-content: space-between;
 }
