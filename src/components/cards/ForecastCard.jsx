@@ -8,7 +8,7 @@ const ForecastcastCard = ({ heading, forcastData }) => {
     <>
       <div className="card card--forecast">
         <h1 className=""> {heading}</h1>
-        <section className="">
+        <section className="card__forecast_content">
           {forcastData.hour.map((element) => {
             const date = new Date(element.time);
             return (

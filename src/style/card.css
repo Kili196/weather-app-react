@@ -2,9 +2,15 @@
   background-color: white;
   border-radius: var(--border-radius);
   padding: 0.7rem 0.7rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card--forecast {
   overflow-y: auto;
   flex-grow: 1;
+}
+
+.card__forecast_content li {
+  display: flex;
+  justify-content: space-between;
 }
