@@ -36,6 +36,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   overflow-y: auto;
+  gap: 10px;
 }
 
 .main--gap {
